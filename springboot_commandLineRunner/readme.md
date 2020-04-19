@@ -1,4 +1,4 @@
-# springboot炖自己
+# springboot炖commandLineRunner
 ### 1. 先睹为快
 ### 2. 实现原理
 #### 2.1 新建项目
