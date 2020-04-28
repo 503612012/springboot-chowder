@@ -11,6 +11,7 @@
     <modules>
         <module>demo</module>
         <module>springboot_commandLineRunner</module>
+        <module>springboot_freemarker</module>
     </modules>
 
     <parent>

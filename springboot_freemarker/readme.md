@@ -1,4 +1,4 @@
-# springboot炖freemaker
+# springboot炖freemarker
 ### 1. 先睹为快
 ### 2. 实现原理
 #### 2.1 新建项目
@@ -12,12 +12,12 @@
     <relativePath/>
 </parent>
 ```
-#### 2.4 pom.xml文件中加入web和freemaker依赖
+#### 2.4 pom.xml文件中加入web和freemarker依赖
 ```xml
 <dependencies>
     <dependency>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
+        <artifactId>spring-boot-start4er-web</artifactId>
     </dependency>
 
     <dependency>
