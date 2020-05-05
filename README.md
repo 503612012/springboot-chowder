@@ -4,3 +4,4 @@
 ## 第3节：springboot炖freemarker
 ## 第4节：springboot炖jsp
 ## 第4节：springboot炖thymeleaf
+## 第4节：springboot炖hibernate
