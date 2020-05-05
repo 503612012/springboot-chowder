@@ -3,5 +3,5 @@
 ## 第2节：springboot炖commandLineRunner
 ## 第3节：springboot炖freemarker
 ## 第4节：springboot炖jsp
-## 第4节：springboot炖thymeleaf
-## 第4节：springboot炖hibernate
+## 第5节：springboot炖thymeleaf
+## 第6节：springboot炖hibernate
