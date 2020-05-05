@@ -13,6 +13,7 @@
         <module>springboot_commandLineRunner</module>
         <module>springboot_freemarker</module>
         <module>springboot_jsp</module>
+        <module>springboot_thymeleaf</module>
     </modules>
 
     <parent>
