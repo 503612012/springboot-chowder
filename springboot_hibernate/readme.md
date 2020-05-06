@@ -56,106 +56,7 @@ public class Application {
 
 }
 ```
-#### 2.7 开发测试接口类
-```java
-import com.oven.service.UserService;
-import com.oven.vo.User;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import javax.annotation.Resource;
-
-@RestController
-public class DemoController {
-
-    @Resource
-    private UserService userService;
-
-    @RequestMapping("/add")
-    public Object add(User user) {
-        userService.add(user);
-        return "添加成功";
-    }
-
-    @RequestMapping("/delete")
-    public Object delete(Integer id) {
-        userService.delete(id);
-        return "删除成功";
-    }
-
-    @RequestMapping("/update")
-    public Object update(User user) {
-        userService.update(user);
-        return "修改成功";
-    }
-
-    @RequestMapping("/getById")
-    public Object getById(Integer id) {
-        return userService.getById(id);
-    }
-
-    @RequestMapping("/getByUname")
-    public Object getByUname(String uname) {
-        return userService.getByUname(uname);
-    }
-
-}
-```
-#### 2.8 开发UserService类
-```java
-import com.oven.dao.UserRepository;
-import com.oven.vo.User;
-import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
-
-@Service
-public class UserService {
-
-    @Resource
-    private UserRepository userRepository;
-
-    public void add(User user) {
-        userRepository.save(user);
-    }
-
-    public void delete(Integer id) {
-        userRepository.deleteById(id);
-    }
-
-    public void update(User user) {
-        User userInDb = userRepository.getOne(user.getId());
-        userInDb.setUname(user.getUname());
-        userInDb.setPwd(user.getPwd());
-        userInDb.setAge(user.getAge());
-        userRepository.deleteById(user.getId());
-        userRepository.save(userInDb);
-    }
-
-    public User getById(Integer id) {
-        return userRepository.getOne(id);
-    }
-
-    public User getByUname(String uname) {
-        return userRepository.getByUname(uname);
-    }
-
-}
-```
-#### 2.9 开发UserRepository类
-```java
-import com.oven.vo.User;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface UserRepository extends JpaRepository<User, Integer> {
-
-    User getByUname(String uname);
-
-}
-```
-#### 2.10 开发User类
+#### 2.7 开发User类
 ```java
 @Entity
 @Table(name = "t_user")
@@ -202,6 +103,105 @@ public class User {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+}
+```
+#### 2.8 开发UserRepository类
+```java
+import com.oven.vo.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UserRepository extends JpaRepository<User, Integer> {
+
+    User getByUname(String uname);
+
+}
+```
+#### 2.9 开发UserService类
+```java
+import com.oven.dao.UserRepository;
+import com.oven.vo.User;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+
+@Service
+public class UserService {
+
+    @Resource
+    private UserRepository userRepository;
+
+    public void add(User user) {
+        userRepository.save(user);
+    }
+
+    public void delete(Integer id) {
+        userRepository.deleteById(id);
+    }
+
+    public void update(User user) {
+        User userInDb = userRepository.getOne(user.getId());
+        userInDb.setUname(user.getUname());
+        userInDb.setPwd(user.getPwd());
+        userInDb.setAge(user.getAge());
+        userRepository.deleteById(user.getId());
+        userRepository.save(userInDb);
+    }
+
+    public User getById(Integer id) {
+        return userRepository.getOne(id);
+    }
+
+    public User getByUname(String uname) {
+        return userRepository.getByUname(uname);
+    }
+
+}
+```
+#### 2.10 开发测试接口类
+```java
+import com.oven.service.UserService;
+import com.oven.vo.User;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
+
+@RestController
+public class DemoController {
+
+    @Resource
+    private UserService userService;
+
+    @RequestMapping("/add")
+    public Object add(User user) {
+        userService.add(user);
+        return "添加成功";
+    }
+
+    @RequestMapping("/delete")
+    public Object delete(Integer id) {
+        userService.delete(id);
+        return "删除成功";
+    }
+
+    @RequestMapping("/update")
+    public Object update(User user) {
+        userService.update(user);
+        return "修改成功";
+    }
+
+    @RequestMapping("/getById")
+    public Object getById(Integer id) {
+        return userService.getById(id);
+    }
+
+    @RequestMapping("/getByUname")
+    public Object getByUname(String uname) {
+        return userService.getByUname(uname);
     }
 
 }
