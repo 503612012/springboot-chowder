@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oven.mapper.UserMapper">
+
+    <insert id="add">
+        insert into t_user (dbid, uname, pwd, age) value (null, #{uname}, #{pwd}, #{age})
+    </insert>
+
+    <update id="update">
+        update t_user set uname=#{uname}, pwd=#{pwd}, age=#{age} where dbid=#{id}
+    </update>
+
+    <delete id="delete">
+        delete from t_user where dbid = #{id}
+    </delete>
+
+    <select id="getById" resultMap="userMap">
+        select * from t_user where dbid = #{id}
+    </select>
+
+    <select id="getByUname" resultMap="userMap">
+        select * from t_user where uname = #{uname}
+    </select>
+
+    <resultMap id="userMap" type="com.oven.vo.User">
+        <id column="dbid" property="id"/>
+        <result column="uname" property="uname"/>
+        <result column="pwd" property="pwd"/>
+        <result column="age" property="age"/>
+    </resultMap>
+
+</mapper>
