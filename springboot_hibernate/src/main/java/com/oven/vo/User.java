@@ -12,6 +12,7 @@ import javax.persistence.*;
 public class User {
 
     @Id
+    @Column(name = "dbid")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @Column(name = "uname")
