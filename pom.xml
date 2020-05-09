@@ -15,6 +15,12 @@
         <module>springboot_jsp</module>
         <module>springboot_thymeleaf</module>
         <module>springboot_hibernate</module>
+        <module>springboot_mybatis_xml</module>
+        <module>springboot_mybatis_annotation</module>
+        <module>springboot_jdbcTemplate</module>
+        <module>springboot_multiDatasource_jdbc</module>
+        <module>springboot_multiDatasource_mybatis</module>
+        <module>springboot_multiDatasource_jpa</module>
     </modules>
 
     <parent>
