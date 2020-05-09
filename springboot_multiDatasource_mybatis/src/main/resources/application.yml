@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    druid:
+      mysql:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/db_test?useUnicode=true&characterEncoding=utf-8
+        username: root
+        password: root
+      oracle:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/db_test2?useUnicode=true&characterEncoding=utf-8
+        username: root
+        password: root
