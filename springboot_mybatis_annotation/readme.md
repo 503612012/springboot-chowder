@@ -41,12 +41,6 @@
         <artifactId>pagehelper-spring-boot-starter</artifactId>
         <version>1.2.7</version>
     </dependency>
-
-    <dependency>
-        <groupId>com.alibaba</groupId>
-        <artifactId>druid-spring-boot-starter</artifactId>
-        <version>1.1.10</version>
-    </dependency>
 </dependencies>
 ```
 #### 2.5 pom.xml文件中加入maven-springboot打包插件
@@ -90,6 +84,7 @@ public class User {
 ```
 #### 2.8 开发UserMapper类
 ```java
+import com.github.pagehelper.Page;
 import com.oven.vo.User;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
@@ -118,6 +113,12 @@ public interface UserMapper {
             @Result(column = "dbid", property = "id")
     })
     User getByUname(String uname);
+
+    @Select("select * from t_user")
+    @Results(value = {
+            @Result(column = "dbid", property = "id")
+    })
+    Page<User> getByPage();
 
 }
 ```
@@ -216,11 +217,10 @@ public class DemoController {
 ```
 #### 2.11 编写配置文件
 ```properties
-spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
-spring.datasource.druid.url=jdbc:mysql://localhost:3306/db_test?useUnicode=true&characterEncoding=utf-8
-spring.datasource.druid.driver=com.mysql.jdbc.Driver
-spring.datasource.druid.username=root
-spring.datasource.druid.password=root
+spring.datasource.url=jdbc:mysql://localhost:3306/db_test?useUnicode=true&characterEncoding=utf-8
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+spring.datasource.username=root
+spring.datasource.password=root
 pagehelper.helper-dialect=mysql
 pagehelper.reasonable=true
 pagehelper.support-methods-arguments=true
