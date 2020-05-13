@@ -3,10 +3,8 @@ package com.oven.mapper;
 import com.github.pagehelper.Page;
 import com.oven.vo.User;
 import org.apache.ibatis.annotations.*;
-import org.springframework.stereotype.Component;
 
 @Mapper
-@Component
 public interface UserMapper {
 
     @Insert("insert into t_user (dbid, uname, pwd, age) value (null, #{uname}, #{pwd}, #{age})")
