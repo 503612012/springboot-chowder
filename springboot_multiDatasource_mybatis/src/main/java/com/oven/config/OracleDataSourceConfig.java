@@ -14,11 +14,8 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = OracleDataSourceConfig.PACKAGE, sqlSessionFactoryRef = "oracleSqlSessionFactory")
+@MapperScan(basePackages = "com.oven.mapper.oracle", sqlSessionFactoryRef = "oracleSqlSessionFactory")
 public class OracleDataSourceConfig {
-
-    static final String PACKAGE = "com.oven.mapper.oracle";
-    static final String MAPPER_LOCATION = "classpath:mapper/oracle/*.xml";
 
     @Bean(name = "oracleDataSource")
     @ConfigurationProperties("spring.datasource.druid.oracle")
@@ -35,7 +32,7 @@ public class OracleDataSourceConfig {
     public SqlSessionFactory oracleSqlSessionFactory(@Qualifier("oracleDataSource") DataSource dataSource) throws Exception {
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
-        sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(OracleDataSourceConfig.MAPPER_LOCATION));
+        sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/oracle/*.xml"));
         return sessionFactory.getObject();
     }
 }

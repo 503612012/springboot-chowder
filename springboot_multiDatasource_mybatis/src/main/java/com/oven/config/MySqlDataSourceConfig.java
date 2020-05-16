@@ -15,11 +15,8 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = MySqlDataSourceConfig.PACKAGE, sqlSessionFactoryRef = "mysqlSqlSessionFactory")
+@MapperScan(basePackages = "com.oven.mapper.mysql", sqlSessionFactoryRef = "mysqlSqlSessionFactory")
 public class MySqlDataSourceConfig {
-
-    static final String PACKAGE = "com.oven.mapper.mysql";
-    static final String MAPPER_LOCATION = "classpath:mapper/mysql/*.xml";
 
     @Primary
     @Bean(name = "mysqlDataSource")
@@ -39,7 +36,7 @@ public class MySqlDataSourceConfig {
     public SqlSessionFactory mysqlSqlSessionFactory(@Qualifier("mysqlDataSource") DataSource dataSource) throws Exception {
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
-        sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MySqlDataSourceConfig.MAPPER_LOCATION));
+        sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/mysql/*.xml"));
         return sessionFactory.getObject();
     }
 
