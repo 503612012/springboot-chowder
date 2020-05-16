@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://localhost:3306/db_test
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
+      # 连接池配置
+      initial-size: 1
+      max-active: 20
+      min-idle: 1
+      max-wait: 1000
+      pool-prepared-statements: true
+      max-open-prepared-statements: 20
+      validation-query: select 1 from dual
+      validation-query-timeout: 50000
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 30000
+      max-evictable-idle-time-millis: 60000
+      remove-abandoned: true
+      remove-abandoned-timeout: 1800
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      max-pool-prepared-statement-per-connection-size: 20
+      filters: stat,wall

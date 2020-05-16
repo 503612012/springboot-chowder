@@ -21,6 +21,7 @@
         <module>springboot_multiDatasource_jdbc</module>
         <module>springboot_multiDatasource_mybatis</module>
         <module>springboot_multiDatasource_jpa</module>
+        <module>springboot_druid_monitor</module>
     </modules>
 
     <parent>
