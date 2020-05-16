@@ -22,16 +22,11 @@ public class JpaConfigMySql {
     @Qualifier(value = "mysqlDataSource")
     private DataSource mysqlDataSource;
 
-    @Resource
-    private JpaProperties jpaProperties;
-
     @Bean
     @Primary
     public LocalContainerEntityManagerFactoryBean mysqlEntityManagerFactoryRef(EntityManagerFactoryBuilder builder) {
         return builder.dataSource(mysqlDataSource)
                 .packages("com.oven.vo")
-                .properties(jpaProperties.getProperties())
-                .persistenceUnit("pu1")
                 .build();
     }
 

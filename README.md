@@ -5,7 +5,6 @@
 ## 第4节：springboot炖jsp
 ## 第5节：springboot炖thymeleaf
 ## 第6节：springboot炖hibernate
-
 ## 第7节：springboot炖mybatis（xml方式）
 ## 第8节：springboot炖mybatis（注解方式）
 ## 第9节：springboot炖jdbcTemplate

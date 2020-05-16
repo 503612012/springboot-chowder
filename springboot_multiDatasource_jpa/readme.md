@@ -142,7 +142,6 @@ public class DataSourceConfig {
 #### 2.10 开发mysql-jpa适配数据源配置
 ```java
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -163,16 +162,11 @@ public class JpaConfigMySql {
     @Qualifier(value = "mysqlDataSource")
     private DataSource mysqlDataSource;
 
-    @Resource
-    private JpaProperties jpaProperties;
-
     @Bean
     @Primary
     public LocalContainerEntityManagerFactoryBean mysqlEntityManagerFactoryRef(EntityManagerFactoryBuilder builder) {
         return builder.dataSource(mysqlDataSource)
                 .packages("com.oven.vo")
-                .properties(jpaProperties.getProperties())
-                .persistenceUnit("pu1")
                 .build();
     }
 
@@ -188,7 +182,6 @@ public class JpaConfigMySql {
 #### 2.11 开发oracle-jpa适配数据源配置
 ```java
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -216,8 +209,6 @@ public class JpaConfigOracle {
     public LocalContainerEntityManagerFactoryBean oracleEntityManagerFactoryRef(EntityManagerFactoryBuilder builder) {
         return builder.dataSource(oracleDataSource)
                 .packages("com.oven.vo")
-                .properties(jpaProperties.getProperties())
-                .persistenceUnit("pu2")
                 .build();
     }
 
