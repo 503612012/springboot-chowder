@@ -110,10 +110,10 @@ public class DruidConfig {
         servletRegistrationBean.setServlet(new StatViewServlet());
         servletRegistrationBean.addUrlMappings("/druid/*");
         Map<String, String> initParameters = new HashMap<>();
-        initParameters.put("loginUsername", USERNAME);// 用户名
-        initParameters.put("loginPassword", PASSWORD);// 密码
+        initParameters.put("loginUsername", USERNAME);
+        initParameters.put("loginPassword", PASSWORD);
         initParameters.put("allow", ""); // IP白名单 (没有配置或者为空，则允许所有访问)
-        // initParameters.put("deny", "192.168.20.38"); // IP黑名单 (存在共同时，deny优先于allow)
+        // initParameters.put("deny", "192.168.52.17"); // IP黑名单 (存在共同时，deny优先于allow)
         servletRegistrationBean.setInitParameters(initParameters);
         return servletRegistrationBean;
     }
