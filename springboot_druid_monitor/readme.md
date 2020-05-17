@@ -83,8 +83,6 @@ public class User {
 ```
 #### 2.8 开发UserDao类
 ```java
-package com.oven.dao;
-
 import com.oven.vo.User;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
