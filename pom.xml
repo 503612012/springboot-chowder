@@ -23,6 +23,7 @@
         <module>springboot_multiDatasource_jpa</module>
         <module>springboot_druid_monitor</module>
         <module>springboot_multi_tenant</module>
+        <module>centos_install_docker</module>
     </modules>
 
     <parent>
