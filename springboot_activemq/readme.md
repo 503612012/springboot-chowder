@@ -1,15 +1,15 @@
 # springboot炖ActiveMQ
 ### 1. 先睹为快
 ### 2. docker安装activemq
-#### 2.1 搜索activemq
+#### 2.1 搜索activemq镜像
 ```shell script
 docker search activemq
 ```
-#### 2.2 下载activemq
+#### 2.2 下载activemq镜像
 ```shell script
 docker pull webcenter/activemq
 ```
-#### 2.3 启动activemq
+#### 2.3 启动activemq容器
 ```shell script
 docker run -d --name myactivemq -p 61616:61616 -p 8161:8161 webcenter/activemq
 ```
