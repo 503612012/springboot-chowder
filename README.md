@@ -14,3 +14,8 @@
 ## 第13节：springboot炖druid数据源监控
 ## 第14节：springboot炖多租户
 ## 第15节：centos7安装docker
+## 第16节：springboot炖ActiveMQ
+## 第17节：springboot炖RabbitMQ
+## 第17节：springboot炖RocketMQ
+
+## 第17节：springboot炖kafka

@@ -15,7 +15,7 @@ echo "brokerIP1=172.16.188.194" > broker.properties
 ```
 #### 2.4 启动broker容器
 ```shell script
-docker run -d -p 10911:10911 -p 10909:10909 -v /path/broker.properties:/opt/rocketmq-4.4.0/bin/broker.properties --name mqbroker --link mqnamesrv -e "NAMESRV_ADDR=mqnamesrv:9876" -e "MAX_POSSIBLE_HEAP=200000000" rocketmqinc/rocketmq sh mqbroker -c broker.properties
+docker run -d -p 10911:10911 -p 10909:10909 -v /root/broker.properties:/opt/rocketmq-4.4.0/bin/broker.properties --name mqbroker --link mqnamesrv -e "NAMESRV_ADDR=mqnamesrv:9876" -e "MAX_POSSIBLE_HEAP=200000000" rocketmqinc/rocketmq sh mqbroker -c broker.properties
 ```
 #### 2.5 启动控制台容器
 ```shell script

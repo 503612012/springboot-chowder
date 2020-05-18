@@ -14,7 +14,7 @@ public class RocketMQConsumer {
     @Resource
     private MessageListener messageListener;
 
-    @Value("${rocketmq.consumer.namesrvAddr}")
+    @Value("${rocketmq.namesrvAddr}")
     private String namesrvAddr;
 
     @Value("${rocketmq.consumer.groupName}")
