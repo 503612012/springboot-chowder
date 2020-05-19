@@ -16,6 +16,8 @@
 ## 第15节：centos7安装docker
 ## 第16节：springboot炖ActiveMQ
 ## 第17节：springboot炖RabbitMQ
-## 第17节：springboot炖RocketMQ
+## 第18节：springboot炖RocketMQ
+## 第19节：springboot炖kafka
 
-## 第17节：springboot炖kafka
+## 第20节：springboot炖springboot_fileUpload
+## 第21节：springboot炖springboot_fastdfs

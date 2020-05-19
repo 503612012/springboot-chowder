@@ -23,7 +23,12 @@
         <module>springboot_multiDatasource_jpa</module>
         <module>springboot_druid_monitor</module>
         <module>springboot_multi_tenant</module>
-        <module>centos_install_docker</module>
+        <module>springboot_activemq</module>
+        <module>springboot_rabbitmq</module>
+        <module>springboot_rocketmq</module>
+        <module>springboot_kafka</module>
+        <module>springboot_fileUpload</module>
+        <module>springboot_fastdfs</module>
     </modules>
 
     <parent>
