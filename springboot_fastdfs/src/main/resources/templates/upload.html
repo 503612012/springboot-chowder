@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>springboot炖fileUpload</title>
+</head>
+<body>
+
+<div th:if="${message}">
+    <h2 th:text="${message}"></h2>
+</div>
+
+<form method="post" action="/upload" enctype="multipart/form-data">
+    <input type="file" name="file"/><br/><br/>
+    <input type="submit" value="上传"/>
+</form>
+
+<div th:if="${path}">
+    <a th:href="@{${path}}" target="_blank">
+        <h2 th:text="${path}"></h2>
+    </a>
+</div>
+
+</body>
+</html>
