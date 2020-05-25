@@ -12,7 +12,7 @@ npm install apidoc -g
 <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.0.5.RELEASE</version>
+    <version>2.0.5.RELEASE</version>
     <relativePath/>
 </parent>
 ```
