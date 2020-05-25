@@ -69,7 +69,7 @@ public class ScheduleTask {
      * (cron="/10 * * * * ?") cron表达式
      */
     @Scheduled(fixedRate = 2000)
-    public void reportCurrentTime() {
+    public void task() {
         System.out.println("do somthing..." + new DateTime().toString("HH:mm:ss"));
     }
 
