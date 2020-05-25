@@ -36,7 +36,7 @@ public class DemoController {
     }
 
     @GetMapping(value = "/delete/{id}")
-    public ResultInfo<Object> delete(@PathVariable("id") int id) {
+    public ResultInfo<String> delete(@PathVariable("id") int id) {
         return new ResultInfo<>(200, "删除成功", "删除用户【" + id + "】成功");
     }
 

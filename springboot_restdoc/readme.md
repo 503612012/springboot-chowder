@@ -245,5 +245,54 @@ public class DemoTest {
 
 }
 ```
-#### 2.11 编译打包运行
+#### 2.11 在main目录下创建asciidoc目录，编写文件index.adoc
+```scaladoc
+____
+springboot_restdoc
+____
+
+
+=======
+____
+测试例子
+____
+'''
+include::{snippets}/test/http-request.adoc[]
+include::{snippets}/test/http-response.adoc[]
+=======
+
+
+=======
+____
+通过用户主键查询用户
+____
+'''
+include::{snippets}/getById/http-request.adoc[]
+include::{snippets}/getById/http-response.adoc[]
+include::{snippets}/getById/request-parameters.adoc[]
+=======
+
+
+=======
+____
+获取全部用户
+____
+'''
+include::{snippets}/getAll/http-request.adoc[]
+include::{snippets}/getAll/http-response.adoc[]
+include::{snippets}/getAll/request-parameters.adoc[]
+=======
+
+
+=======
+____
+删除用户
+____
+'''
+include::{snippets}/delete/http-request.adoc[]
+include::{snippets}/delete/http-response.adoc[]
+include::{snippets}/delete/path-parameters.adoc[]
+=======
+```
+#### 2.12 编译打包运行
 ### 3. 应用场景
