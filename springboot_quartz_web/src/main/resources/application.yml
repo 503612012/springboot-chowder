@@ -1,0 +1,25 @@
+spring:
+  quartz:
+    job-store-type: jdbc
+    properties:
+      org:
+        quartz:
+          datasource:
+            driver-class-name: com.mysql.jdbc.Driver
+            url: jdbc:mysql://localhost:3306/db_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+            username: root
+            password: root
+          scheduler:
+            instancName: clusteredScheduler
+            instanceId: AUTO
+          jobStore:
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            tablePrefix: QRTZ_
+            isClustered: true
+            clusterCheckinInterval: 1000
+            useProperties: false
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 20
+            threadPriority: 5
