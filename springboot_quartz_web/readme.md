@@ -225,7 +225,7 @@ public class QuartzSchedulerConfig {
 
     private void startJob2(Scheduler scheduler) throws SchedulerException {
         JobDetail jobDetail = JobBuilder.newJob(MyJob2.class).withIdentity("job2", "group2").build();
-        CronScheduleBuilder cronScheduleBuilder = CronScheduleBuilder.cronSchedule("0/30 * * * * ?");
+        CronScheduleBuilder cronScheduleBuilder = CronScheduleBuilder.cronSchedule("0/5 * * * * ?");
         CronTrigger cronTrigger = TriggerBuilder
                 .newTrigger()
                 .withIdentity("job2", "group2")
@@ -260,79 +260,96 @@ public class DemoController {
     private QuartzSchedulerConfig quartzSchedulerConfig;
 
     @RequestMapping("/startAll")
-    public void startAllJob() {
+    public String startAllJob() {
         try {
             quartzSchedulerConfig.startAllJob();
+            return "启动成功";
         } catch (SchedulerException e) {
             e.printStackTrace();
+            return "启动失败";
         }
     }
 
     @RequestMapping("/getInfo")
     public String getJobInfo(String name, String group) {
-        String info = null;
+        String info;
         try {
             info = quartzSchedulerConfig.getJobInfo(name, group);
         } catch (SchedulerException e) {
             e.printStackTrace();
+            return null;
         }
         return info;
     }
 
     @RequestMapping("/modify")
-    public boolean modifyJob(String name, String group, String time) {
-        boolean flag = true;
+    public String modifyJob(String name, String group, String time) {
+        boolean flag;
         try {
             flag = quartzSchedulerConfig.modifyJob(name, group, time);
         } catch (SchedulerException e) {
             e.printStackTrace();
+            return "修改失败";
         }
-        return flag;
+        if (flag) {
+            return "修改成功";
+        }
+        return "修改失败";
     }
 
     @RequestMapping(value = "/pause")
-    public void pauseJob(String name, String group) {
+    public String pauseJob(String name, String group) {
         try {
             quartzSchedulerConfig.pauseJob(name, group);
+            return "暂停成功";
         } catch (SchedulerException e) {
             e.printStackTrace();
+            return "暂停失败";
         }
     }
 
     @RequestMapping(value = "/pauseAll")
-    public void pauseAllJob() {
+    public String pauseAllJob() {
         try {
             quartzSchedulerConfig.pauseAllJob();
+            return "暂停全部成功";
         } catch (SchedulerException e) {
             e.printStackTrace();
+            return "暂停全部失败";
         }
     }
 
 
     @RequestMapping(value = "/resume")
-    public void resume(String name, String group) {
+    public String resume(String name, String group) {
         try {
             quartzSchedulerConfig.resumeJob(name, group);
+            return "重启成功";
         } catch (SchedulerException e) {
             e.printStackTrace();
+            return "重启失败";
         }
     }
 
     @RequestMapping(value = "/resumeAll")
-    public void resumeAll() {
+    public String resumeAll() {
         try {
             quartzSchedulerConfig.resumeAllJob();
+            return "重启全部成功";
         } catch (SchedulerException e) {
             e.printStackTrace();
+            return "重启全部失败";
         }
     }
 
     @RequestMapping(value = "/delete")
-    public void delete(String name, String group) {
+    public String delete(String name, String group) {
         try {
             quartzSchedulerConfig.deleteJob(name, group);
+            return "删除成功";
         } catch (SchedulerException e) {
             e.printStackTrace();
+            return "删除失败";
         }
     }
 
