@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <property name="LOG_HOME" value="/Users/oven/log/springboot_logback"/>
+    <property name="PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger.%M:%L - %msg%n"/>
+
+    <!-- DEBUG日志定义 -->
+    <appender name="DEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/springboot_logback.debug.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/springboot_logback.debug.%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <maxHistory>180</maxHistory>
+            <maxFileSize>10MB</maxFileSize>
+            <totalSizeCap>20GB</totalSizeCap>
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- 异步DEBUG日志定义 -->
+    <appender name="SYNC_DEBUG" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="DEBUG"/>
+        <includeCallerData>true</includeCallerData>
+    </appender>
+
+    <!-- INFO日志定义 -->
+    <appender name="INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/springboot_logback.info.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/springboot_logback.info.%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <maxHistory>180</maxHistory>
+            <maxFileSize>10MB</maxFileSize>
+            <totalSizeCap>20GB</totalSizeCap>
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- 异步INFO日志定义 -->
+    <appender name="SYNC_INFO" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="INFO"/>
+        <includeCallerData>true</includeCallerData>
+    </appender>
+
+    <!-- ERROR日志定义 -->
+    <appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/springboot_logback.error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/springboot_logback.error.%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <maxHistory>180</maxHistory>
+            <maxFileSize>10MB</maxFileSize>
+            <totalSizeCap>20GB</totalSizeCap>
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- 异步ERROR日志定义 -->
+    <appender name="SYNC_ERROR" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="ERROR"/>
+        <includeCallerData>true</includeCallerData>
+    </appender>
+
+    <!-- 定义控制台日志信息 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%red(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger{10}).%M:%L - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 定义异步控制台日志信息 -->
+    <appender name="SYNC_STDOUT" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="STDOUT"/>
+        <includeCallerData>true</includeCallerData>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="SYNC_STDOUT"/>
+    </root>
+    <logger name="com.oven.log.DebugLog" level="DEBUG" additivity="false">
+        <appender-ref ref="SYNC_DEBUG"/>
+    </logger>
+    <logger name="com.oven.log.InfoLog" level="INFO" additivity="false">
+        <appender-ref ref="SYNC_INFO"/>
+    </logger>
+    <logger name="com.oven.log.ErrorLog" level="ERROR" additivity="false">
+        <appender-ref ref="SYNC_ERROR"/>
+    </logger>
+
+</configuration>
