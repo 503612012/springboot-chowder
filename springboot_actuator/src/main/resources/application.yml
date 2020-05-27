@@ -1,0 +1,11 @@
+info:
+  name: springboot_actuator
+  version: v1.0.0
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
