@@ -1,0 +1,13 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+info:
+  name: demo
+  author: Oven
