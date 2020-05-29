@@ -3,7 +3,7 @@
 ### 2. 实现原理
 #### 2.1 新建文件夹demo，为项目根目录
 #### 2.2 创建maven目录结构，以及pom.xml文件
-#### 2.3 pom.xml文件中加入spring-boot-starter-parent
+#### 2.3 pom.xml文件中加入依赖
 ```xml
 <parent>
     <groupId>org.springframework.boot</groupId>
