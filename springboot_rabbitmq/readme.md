@@ -12,7 +12,7 @@ docker run -d --name myrabbitmq -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAU
 ### 3. 实现原理
 #### 3.1 新建项目
 #### 3.2 创建maven目录结构，以及pom.xml文件
-#### 3.3 pom.xml文件中加入spring-boot-starter-parent
+#### 3.3 pom.xml文件中加入依赖
 ```xml
 <parent>
     <groupId>org.springframework.boot</groupId>
