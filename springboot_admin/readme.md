@@ -61,7 +61,7 @@ public class Application {
 
 }
 ```
-#### 2.7 编译配置文件
+#### 2.7 编辑配置文件
 ```yaml
 spring:
   boot:
