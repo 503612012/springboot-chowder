@@ -66,7 +66,7 @@ public class DemoController {
 
 }
 ```
-#### 2.8 编译配置文件
+#### 2.8 编辑配置文件
 ```yaml
 info:
   name: springboot_actuator
