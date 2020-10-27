@@ -10,11 +10,6 @@ import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
 
-/**
- * 动态定时任务
- *
- * @author Oven
- */
 @Component
 public class DynamicScheduleTask implements SchedulingConfigurer {
 
