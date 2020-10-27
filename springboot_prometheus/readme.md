@@ -74,7 +74,7 @@ public class Application {
 
 }
 ```
-#### 2.7 编译配置文件
+#### 2.7 编辑配置文件
 ```properties
 spring.application.name=springboot_prometheus
 management.endpoints.web.exposure.include=*
