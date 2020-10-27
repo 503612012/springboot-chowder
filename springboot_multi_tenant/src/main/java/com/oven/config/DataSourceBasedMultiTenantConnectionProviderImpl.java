@@ -41,6 +41,15 @@ public class DataSourceBasedMultiTenantConnectionProviderImpl extends AbstractDa
             map.putAll(tenantDataSource.getAll());
         }
         return map.get(tenant);
+
+//        // 懒加载模式
+//        DataSource dataSource = map.get(tenantIdentifier);
+//        if (dataSource == null) {
+//            TenantDataSource tenantDataSource = context.getBean(TenantDataSource.class);
+//            dataSource = tenantDataSource.getDataSource(tenantIdentifier);
+//            map.put(tenantIdentifier, dataSource);
+//        }
+//        return dataSource;
     }
 
 }
