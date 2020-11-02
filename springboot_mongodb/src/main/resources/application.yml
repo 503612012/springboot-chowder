@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      host: 172.16.188.194
+      port: 27017
+      database: springboot_mongo
