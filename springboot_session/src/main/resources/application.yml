@@ -1,0 +1,3 @@
+spring:
+  redis:
+    password: 5217
