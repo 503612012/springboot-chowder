@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title th:text="#{user.title}">用户登陆</title>
+    <script th:src="@{/webjars/jquery/3.3.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/jquery-i18n-properties/jquery.i18n.properties.min.js}"></script>
+
+    <script th:inline="javascript">
+        // 获取应用路径
+        const ROOT = [[${#servletContext.contextPath}]];
+
+        // 获取默认语言
+        const LANG_COUNTRY = [[${#locale.language+'_'+#locale.country}]];
+
+        // 初始化i18n插件
+        $.i18n.properties({
+            path: ROOT + '/i18n/',
+            name: 'messages',
+            language: LANG_COUNTRY,
+            mode: 'both'
+        });
+
+        // 初始化i18n函数
+        // noinspection JSUnusedGlobalSymbols
+        function i18n(msgKey) {
+            try {
+                return $.i18n.prop(msgKey);
+            } catch (e) {
+                return msgKey;
+            }
+        }
+    </script>
+</head>
+<body>
+<div>
+    <select id="locale">
+        <option value="zh_CN">中文简体</option>
+        <option value="zh_TW">中文繁体</option>
+        <option value="en_US">English</option>
+    </select>
+    <h3 th:text="#{user.welcome}">欢迎登陆</h3>
+
+    <form>
+        <div>
+            <span></span>
+            <input id="username" name="username" type="text" autocomplete="new-password" th:placeholder="#{user.username}">
+        </div>
+        <div>
+            <span></span>
+            <input id="password" name="password" type="password" autocomplete="new-password" th:placeholder="#{user.password}">
+        </div>
+        <div>
+            <button th:text="#{user.login}">登录</button>
+        </div>
+    </form>
+</div>
+
+<!--suppress JSJQueryEfficiency -->
+<script th:inline="javascript">
+    //选中语言
+    $("#locale").find('option[value="' + LANG_COUNTRY + '"]').attr('selected', true);
+
+    //切换语言
+    $("#locale").change(function() {
+        $.get(ROOT + '/?lang=' + $("#locale").val(), function() {
+            location.reload();
+        });
+    });
+</script>
+
+</body>
+</html>
