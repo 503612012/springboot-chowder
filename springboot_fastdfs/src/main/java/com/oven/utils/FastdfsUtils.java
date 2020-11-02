@@ -31,7 +31,7 @@ public class FastdfsUtils {
     public StorePath upload(MultipartFile file) throws IOException {
         // 设置文件信息
         Set<MetaData> mataData = new HashSet<>();
-        mataData.add(new MetaData("author", "fastdfs"));
+        mataData.add(new MetaData("author", "Oven"));
         mataData.add(new MetaData("description", file.getOriginalFilename()));
         // 上传
         return fastFileStorageClient.uploadFile(
