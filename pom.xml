@@ -29,6 +29,56 @@
         <module>springboot_kafka</module>
         <module>springboot_fileUpload</module>
         <module>springboot_fastdfs</module>
+        <module>springboot_swagger2</module>
+        <module>springboot_apidoc</module>
+        <module>springboot_restdoc</module>
+        <module>springboot_knife4j</module>
+        <module>springboot_task</module>
+        <module>springboot_schedule</module>
+        <module>springboot_quartz</module>
+        <module>springboot_quartz_web</module>
+        <module>springboot_logback</module>
+        <module>springboot_graylog</module>
+        <module>springboot_actuator</module>
+        <module>springboot_elk</module>
+        <module>springboot_admin</module>
+        <module>springboot_prometheus</module>
+        <module>springboot_devtools</module>
+        <module>springboot_cache_caffeine</module>
+        <module>springboot_cache_redis</module>
+        <module>springboot_cache_spring</module>
+        <module>springboot_cache_ehcache</module>
+        <module>springboot_cache_guava</module>
+        <module>springboot_dubbo</module>
+        <module>springboot_esper</module>
+        <module>springboot_email</module>
+        <module>springboot_factory</module>
+        <module>springboot_interceptor</module>
+        <module>springboot_filter</module>
+        <module>springboot_listener</module>
+        <module>springboot_jasypt</module>
+        <module>springboot_event</module>
+        <module>springboot_webservice</module>
+        <module>springboot_lucene</module>
+        <module>springboot_limit</module>
+        <module>springboot_exception</module>
+        <module>springboot_hbase</module>
+        <module>springboot_mongodb</module>
+        <module>springboot_redis</module>
+        <module>springboot_memcached</module>
+        <module>springboot_i18n</module>
+        <module>springboot_session</module>
+        <module>springboot_restTemplate</module>
+        <module>springboot_access_log</module>
+        <module>springboot_property</module>
+        <module>springboot_async</module>
+        <module>springboot_jwt</module>
+        <module>springboot_netty</module>
+        <module>springboot_shiro</module>
+        <module>springboot_docker</module>
+        <module>springboot_dateformat</module>
+        <module>springboot_nginx_loadBalanced</module>
+        <module>springboot_argumentResolver</module>
     </modules>
 
     <parent>
