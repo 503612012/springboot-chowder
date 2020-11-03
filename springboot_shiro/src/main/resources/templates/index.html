@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h1>index</h1>
+<ul>
+    <li shiro:hasPermission="user:list">user:list</li>
+    <li shiro:hasPermission="user:add">user:add</li>
+    <li shiro:hasPermission="user:update">user:update</li>
+    <li shiro:hasPermission="user:delete">user:delete</li>
+</ul>
+</body>
+</html>
