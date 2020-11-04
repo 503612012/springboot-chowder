@@ -107,7 +107,7 @@ public class DemoController {
 ```
 #### 2.10 docker开启远程访问，编辑/usr/lib/systemd/system/docker.service文件
 ```
-ExecStart=/usr/bin** -H tcp://0.0.0.0:2375  -H unix:///var/run/docker.sock
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375  -H unix:///var/run/docker.sock
 ```
 #### 2.11 重启docker
 ```shell script
@@ -127,4 +127,17 @@ server.port=8990
 ```shell script
 mvn package
 ```
-### 3. 应用场景
+### 3. 防火墙操作
+#### 3.1 添加端口
+```shell script
+firewall-cmd --zone=public --add-port=8888/tcp --permanent
+```
+#### 3.1 重载
+```shell script
+firewall-cmd --reload
+```
+#### 3.1 查询
+```shell script
+firewall-cmd --query-port=8888/tcp
+```
+### 4. 应用场景
