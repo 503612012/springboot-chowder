@@ -1,5 +1,5 @@
 # springboot大杂烩
-### 001. springboot炖自己剪辑
+### 001. springboot炖自己
 ### 002. springboot炖commandLineRunner
 ### 003. springboot炖freemarker
 ### 004. springboot炖jsp
