@@ -57,18 +57,26 @@ public class PropertyConfig {
             log.error("加载系统配置表异常，异常信息：", e);
             return null;
         } finally {
-            try {
-                if (conn != null) {
+            if (conn != null) {
+                try {
                     conn.close();
+                } catch (Exception e) {
+                    log.error("关闭连接异常：", e);
                 }
-                if (pstmt != null) {
+            }
+            if (pstmt != null) {
+                try {
                     pstmt.close();
+                } catch (Exception e) {
+                    log.error("关闭执行器异常：", e);
                 }
-                if (rs != null) {
+            }
+            if (rs != null) {
+                try {
                     rs.close();
+                } catch (Exception e) {
+                    log.error("关闭结果集异常：", e);
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
             }
         }
     }
