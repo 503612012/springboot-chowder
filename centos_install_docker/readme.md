@@ -24,7 +24,7 @@ sudo yum-config-manager \
 ```
 ##### 1.4 安装Docker Engine
 ```shell
-sudo yum install docker-ce docker-ce-cli containerd.io
+sudo yum install -y docker-ce docker-ce-cli containerd.io
 ```
 #### 2. 设置镜像
 ##### 2.1 创建或修改 
