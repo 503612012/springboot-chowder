@@ -6,6 +6,8 @@ import io.netty.channel.ChannelHandlerContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.swing.JPopupMenu;
+
 public class EchoClientHandler extends ChannelHandlerAdapter {
 
     private static final String ECHO_REQ = "Hi,Welcome to Netty World.$_$";
