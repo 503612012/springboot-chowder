@@ -79,6 +79,8 @@
         <module>springboot_dateformat</module>
         <module>springboot_nginx_loadBalanced</module>
         <module>springboot_argumentResolver</module>
+        <module>springboot_elasticjob</module>
+        <module>springboot_sentinel</module>
     </modules>
 
     <parent>
