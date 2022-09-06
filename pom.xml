@@ -82,6 +82,7 @@
         <module>springboot_elasticjob</module>
         <module>springboot_sentinel</module>
         <module>springboot_easypoi</module>
+        <module>springboot_dynamic_schedule</module>
     </modules>
 
     <parent>
