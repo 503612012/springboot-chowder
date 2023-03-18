@@ -169,7 +169,7 @@ public class Knife4jConfig {
                 .title("我是title")
                 .description("我是描述")
                 .termsOfServiceUrl("http://localhost:8081")
-                .contact(new Contact("Oven", "http://cloveaire.com", "503612012@qq.com"))
+                .contact(new Contact("Oven", "http://qqxki.com", "503612012@qq.com"))
                 .version("1.0.0")
                 .build();
     }
