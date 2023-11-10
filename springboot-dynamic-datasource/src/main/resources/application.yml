@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    mysql:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/db_test_mysql
+      username: root
+      password: root
+    oracle:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/db_test_oracle
+      username: root
+      password: root

@@ -91,6 +91,21 @@
         <module>springboot-sentinel</module>
         <module>springboot-easypoi</module>
         <module>springboot-dynamic-schedule</module>
+        <module>springboot-mqtt</module>
+        <module>springboot-sse</module>
+        <module>springboot-minio</module>
+        <module>springboot-websocket</module>
+        <module>springboot-caffeine</module>
+        <module>springboot-cross</module>
+        <module>springboot-dynamic-datasource</module>
+        <module>springboot-elasticsearch</module>
+        <module>springboot-encry</module>
+        <module>springboot-extend</module>
+        <module>springboot-getIp</module>
+        <module>springboot-guava</module>
+        <module>springboot-oauth2</module>
+        <module>springboot-redisson</module>
+        <module>springboot-webflux</module>
     </modules>
 
     <build>

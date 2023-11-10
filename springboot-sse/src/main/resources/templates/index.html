@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="width: 200px; height: 200px; border: 1px solid black;">
+    <h1 id="message1"></h1>
+</div>
+<div style="width: 200px; height: 200px; border: 1px solid black;">
+    <h1 id="message2"></h1>
+</div>
+<script>
+    var sse = new EventSource("/sse/connect/7");
+
+    sse.onopen = (event) => {
+
+    }
+
+    sse.onmessage = (event) => {
+        debugger
+        console.log(event.data);
+        document.getElementById("message1").innerHTML = event.data;
+    }
+
+    sse.onerror = (event) => {
+        sse.close();
+    }
+
+    /**
+     * 自定义消息触发
+     */
+    sse.addEventListener("camera", function (e) {
+        debugger
+        console.log(e)
+        document.getElementById("message2").innerHTML = event.data;
+    });
+</script>
+</body>
+</html>

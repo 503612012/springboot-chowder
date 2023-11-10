@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript" src="jquery.min.js"></script>
+<button onclick="test1()">test1</button>
+<button onclick="test2()">test2</button>
+<script>
+    function test1() {
+        $.get('http://localhost:8080/test', function(result) {
+            alert(result);
+        });
+    }
+    
+    function test2() {
+        $.post('http://localhost:8080/test', function(result) {
+            alert(result);
+        });
+    }
+</script>
+</body>
+</html>
