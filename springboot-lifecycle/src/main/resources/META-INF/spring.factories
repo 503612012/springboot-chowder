@@ -1,0 +1,6 @@
+org.springframework.context.ApplicationListener=com.oven.event.EnvironmentPreparedEvent,\
+  com.oven.event.FailedEvent,\
+  com.oven.event.PreparedEvent,\
+  com.oven.event.ReadyEvent,\
+  com.oven.event.StartedEvent,\
+  com.oven.event.StartingEvent

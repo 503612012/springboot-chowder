@@ -1,0 +1,9 @@
+derby:
+  path: /Users/oven/Downloads/derby
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.apache.derby.jdbc.EmbeddedDriver
+    url: jdbc:derby:${derby.path};create=true
+    username: root
+    password: 123456

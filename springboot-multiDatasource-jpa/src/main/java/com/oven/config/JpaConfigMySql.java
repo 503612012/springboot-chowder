@@ -26,7 +26,7 @@ public class JpaConfigMySql {
     @Primary
     public LocalContainerEntityManagerFactoryBean mysqlEntityManagerFactoryRef(EntityManagerFactoryBuilder builder) {
         return builder.dataSource(mysqlDataSource)
-                .packages("com.oven.vo")
+                .packages("com.oven.entity")
                 .build();
     }
 

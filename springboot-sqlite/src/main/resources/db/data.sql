@@ -1,0 +1,1 @@
+insert into t_student values ('张三', 18, 1, '15700000001');

@@ -244,7 +244,7 @@ public class MailController {
 
     @RequestMapping("/send")
     public String send() {
-        String to = "779880018@qq.com";
+        String to = "1234567@qq.com";
         String title = "测试springboot发送邮件";
         String content = "我是内容";
         boolean result = mailService.send(to, title, content);
@@ -253,7 +253,7 @@ public class MailController {
 
     @RequestMapping("/sendHtml")
     public String sendHtml() {
-        String to = "779880018@qq.com";
+        String to = "1234567@qq.com";
         String title = "测试springboot发送邮件";
         String content = "<html><body><h1>我是h1标签</h1><span style='color: red;'>我是内容</span></body></html>";
         boolean result = mailService.sendWithHtml(to, title, content);
@@ -262,7 +262,7 @@ public class MailController {
 
     @RequestMapping("/sendImg")
     public String sendImg() {
-        String to = "779880018@qq.com";
+        String to = "1234567@qq.com";
         String title = "测试springboot发送邮件";
         String content = "<html><body>" +
                 "<p><h2 style='color: blue'>图片1</h2><img style='width: 120px; height: 120px;' src='cid:img1'></p>" +
@@ -282,7 +282,7 @@ public class MailController {
 
     @RequestMapping("/sendEnclosure")
     public String sendEnclosure() {
-        String to = "779880018@qq.com";
+        String to = "1234567@qq.com";
         String title = "测试springboot发送邮件";
         String content = "带附件的邮件";
         String[] paths = new String[]{

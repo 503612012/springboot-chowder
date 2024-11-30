@@ -1,9 +1,9 @@
 package com.oven.controller;
 
 import com.oven.constants.AppConst;
+import com.oven.entity.User;
 import com.oven.utils.JwtUtils;
 import com.oven.utils.ResultInfo;
-import com.oven.vo.User;
 import io.jsonwebtoken.Claims;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

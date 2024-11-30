@@ -219,8 +219,8 @@ public class User {
 ```
 #### 2.10 开发测试控制器类
 ```java
+import com.oven.entity.User;
 import com.oven.service.RedisService;
-import com.oven.vo.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

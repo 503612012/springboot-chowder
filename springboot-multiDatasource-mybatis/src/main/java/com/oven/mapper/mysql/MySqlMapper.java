@@ -1,6 +1,6 @@
 package com.oven.mapper.mysql;
 
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.oven.controller;
 
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -50,19 +50,19 @@ public class DemoController {
      * @apiSuccessExample Success-Response:
      * HTTP/1.1 200 请求成功
      * {
-     *      "code": "200",
-     *      "data": [{
-     *                   "id": "1",
-     *                   "uname": "admin"
-     *                   "pwd": "123"
-     *                   "age": 18
-     *              }]
+     * "code": "200",
+     * "data": [{
+     * "id": "1",
+     * "uname": "admin"
+     * "pwd": "123"
+     * "age": 18
+     * }]
      * }
      * @apiErrorExample Error-Response:
      * HTTP/1.1 201 接口异常
      * {
-     *      "code": "201",
-     *      "data": "系统异常"
+     * "code": "201",
+     * "data": "系统异常"
      * }
      */
     @RequestMapping(value = "search", method = RequestMethod.GET)

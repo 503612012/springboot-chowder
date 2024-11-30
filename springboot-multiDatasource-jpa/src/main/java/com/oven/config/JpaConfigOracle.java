@@ -23,7 +23,7 @@ public class JpaConfigOracle {
     @Bean
     public LocalContainerEntityManagerFactoryBean oracleEntityManagerFactoryRef(EntityManagerFactoryBuilder builder) {
         return builder.dataSource(oracleDataSource)
-                .packages("com.oven.vo")
+                .packages("com.oven.entity")
                 .build();
     }
 

@@ -29,7 +29,7 @@ services:
     environment:
       - GRAYLOG_PASSWORD_SECRET=somepasswordpepper
       - GRAYLOG_ROOT_PASSWORD_SHA2=8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
-      - GRAYLOG_HTTP_EXTERNAL_URI=http://172.16.188.194:9000/
+      - GRAYLOG_HTTP_EXTERNAL_URI=http://192.168.63.2:9000/
     links:
       - mongodb:mongo
       - elasticsearch
@@ -149,7 +149,7 @@ public class InfoLog implements CommandLineRunner {
     </appender>
 
     <appender name="GELF" class="de.siegmar.logbackgelf.GelfUdpAppender">
-        <graylogHost>172.16.188.194</graylogHost>
+        <graylogHost>192.168.63.2</graylogHost>
         <graylogPort>12201</graylogPort>
     </appender>
 

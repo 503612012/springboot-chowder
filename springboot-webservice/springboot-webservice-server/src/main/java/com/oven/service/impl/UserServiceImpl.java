@@ -1,8 +1,8 @@
 package com.oven.service.impl;
 
+import com.oven.entity.Gender;
+import com.oven.entity.User;
 import com.oven.service.UserService;
-import com.oven.vo.Gender;
-import com.oven.vo.User;
 
 import javax.jws.WebService;
 import java.util.ArrayList;

@@ -10,7 +10,7 @@
     </select>
 
     <!-- 结果集映射 -->
-    <resultMap type="com.oven.vo.User" id="userMap">
+    <resultMap type="com.oven.entity.User" id="userMap">
         <id column="id" property="id"/>
         <result column="name" property="name"/>
         <result column="password" property="password"/>

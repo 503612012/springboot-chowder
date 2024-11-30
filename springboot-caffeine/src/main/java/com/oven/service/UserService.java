@@ -1,6 +1,6 @@
 package com.oven.service;
 
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;

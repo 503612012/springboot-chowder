@@ -1,7 +1,7 @@
 package com.oven.controller;
 
+import com.oven.entity.Article;
 import com.oven.util.LuceneUtil;
-import com.oven.vo.Article;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 

@@ -84,7 +84,7 @@ public @interface CurrentUser {
 #### 2.9 开发自定义参数解析器
 ```java
 import com.oven.annotation.CurrentUser;
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.support.WebDataBinderFactory;
@@ -136,7 +136,7 @@ public class WebConfig implements WebMvcConfigurer {
 #### 2.11 开发测试接口
 ```java
 import com.oven.annotation.CurrentUser;
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

@@ -1,7 +1,7 @@
 package com.oven.controller;
 
 import com.oven.dao.UserRepository;
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryStringQueryBuilder;
 import org.springframework.beans.factory.annotation.Autowired;

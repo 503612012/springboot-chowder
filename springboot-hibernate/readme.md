@@ -110,7 +110,7 @@ public class User {
 ```
 #### 2.8 开发UserRepository类
 ```java
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -124,7 +124,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 #### 2.9 开发UserService类
 ```java
 import com.oven.dao.UserRepository;
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -164,8 +164,8 @@ public class UserService {
 ```
 #### 2.10 开发测试接口类
 ```java
+import com.oven.entity.User;
 import com.oven.service.UserService;
-import com.oven.vo.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

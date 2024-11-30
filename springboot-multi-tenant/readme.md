@@ -83,7 +83,7 @@ public class User {
 ```
 #### 2.8 开发UserDao类
 ```java
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -108,7 +108,7 @@ public class UserDao extends BaseDao {
 #### 2.9 开发UserService类
 ```java
 import com.oven.dao.UserDao;
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -172,7 +172,7 @@ public class DataSourceConfig {
 ```
 #### 2.13 开发租户dao层
 ```java
-import com.oven.config.vo.DataSourceConfig;
+import com.oven.config.entity.DataSourceConfig;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -239,7 +239,7 @@ public class DefaultDataSourceConfig {
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import com.oven.config.dao.DataSourceConfigDao;
-import com.oven.config.vo.DataSourceConfig;
+import com.oven.config.entity.DataSourceConfig;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;

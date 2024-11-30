@@ -78,7 +78,7 @@ public class User {
 ```
 #### 2.8 开发UserMapper类
 ```java
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
@@ -122,7 +122,7 @@ public interface UserMapper {
         select * from t_user where uname = #{uname}
     </select>
     
-    <resultMap id="userMap" type="com.oven.vo.User">
+    <resultMap id="userMap" type="com.oven.entity.User">
         <id column="dbid" property="id"/>
         <result column="uname" property="uname"/>
         <result column="pwd" property="pwd"/>
@@ -133,8 +133,8 @@ public interface UserMapper {
 ```
 #### 2.10 开发UserService类
 ```java
+import com.oven.entity.User;
 import com.oven.mapper.UserMapper;
-import com.oven.vo.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -169,8 +169,8 @@ public class UserService {
 ```
 #### 2.11 开发测试接口类
 ```java
+import com.oven.entity.User;
 import com.oven.service.UserService;
-import com.oven.vo.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -215,7 +215,7 @@ public class DemoController {
 #### 2.12 编写配置文件
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/db_test?useUnicode=true&characterEncoding=utf-8
-spring.datasource.driverClassName=com.mysql.jdbc.Driver
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 spring.datasource.username=root
 spring.datasource.password=root
 mybatis.type-aliases-package=com.oven.mapper

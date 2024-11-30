@@ -26,28 +26,28 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.cxf</groupId>
-                <artifactId>cxf-codegen-plugin</artifactId>
-                <version>3.2.5</version>
-                <executions>
-                    <execution>
-                        <id>generate-sources</id>
-                        <phase>generate-sources</phase>
-                        <configuration>
-                            <sourceRoot>src/main/resources/cxf</sourceRoot>
-                            <wsdlOptions>
-                                <wsdlOption>
-                                    <wsdl>http://localhost:8080/ws/user?wsdl</wsdl>
-                                </wsdlOption>
-                            </wsdlOptions>
-                        </configuration>
-                        <goals>
-                            <goal>wsdl2java</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+            <!-- <plugin> -->
+            <!--     <groupId>org.apache.cxf</groupId> -->
+            <!--     <artifactId>cxf-codegen-plugin</artifactId> -->
+            <!--     <version>3.2.5</version> -->
+            <!--     <executions> -->
+            <!--         <execution> -->
+            <!--             <id>generate-sources</id> -->
+            <!--             <phase>generate-sources</phase> -->
+            <!--             <configuration> -->
+            <!--                 <sourceRoot>src/main/resources/cxf</sourceRoot> -->
+            <!--                 <wsdlOptions> -->
+            <!--                     <wsdlOption> -->
+            <!--                         <wsdl>http://localhost:8080/ws/user?wsdl</wsdl> -->
+            <!--                     </wsdlOption> -->
+            <!--                 </wsdlOptions> -->
+            <!--             </configuration> -->
+            <!--             <goals> -->
+            <!--                 <goal>wsdl2java</goal> -->
+            <!--             </goals> -->
+            <!--         </execution> -->
+            <!--     </executions> -->
+            <!-- </plugin> -->
         </plugins>
     </build>
 

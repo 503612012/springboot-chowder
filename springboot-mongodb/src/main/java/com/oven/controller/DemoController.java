@@ -1,7 +1,7 @@
 package com.oven.controller;
 
+import com.oven.entity.User;
 import com.oven.service.UserService;
-import com.oven.vo.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

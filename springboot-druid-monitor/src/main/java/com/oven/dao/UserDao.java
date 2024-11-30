@@ -1,6 +1,6 @@
 package com.oven.dao;
 
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;

@@ -168,7 +168,7 @@ public class DemoController {
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
     <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <destination>172.16.188.194:4560</destination>
+        <destination>192.168.63.2:4560</destination>
         <!-- 日志输出编码 -->
         <encoder charset="UTF-8" class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
             <providers>

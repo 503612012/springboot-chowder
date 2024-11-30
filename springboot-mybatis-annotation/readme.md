@@ -85,8 +85,14 @@ public class User {
 #### 2.8 开发UserMapper类
 ```java
 import com.github.pagehelper.Page;
-import com.oven.vo.User;
-import org.apache.ibatis.annotations.*;
+import com.oven.entity.User;
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 @Mapper
 public interface UserMapper {
@@ -124,8 +130,8 @@ public interface UserMapper {
 ```java
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.oven.entity.User;
 import com.oven.mapper.UserMapper;
-import com.oven.vo.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -165,8 +171,8 @@ public class UserService {
 ```
 #### 2.10 开发测试接口类
 ```java
+import com.oven.entity.User;
 import com.oven.service.UserService;
-import com.oven.vo.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

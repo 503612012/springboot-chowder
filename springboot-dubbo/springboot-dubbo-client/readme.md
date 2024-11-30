@@ -20,6 +20,39 @@
         <artifactId>springboot-dubbo-common-api</artifactId>
         <version>${project.version}</version>
     </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.apache.dubbo</groupId>
+        <artifactId>dubbo-spring-boot-starter</artifactId>
+        <version>${dubbo.version}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.apache.zookeeper</groupId>
+        <artifactId>zookeeper</artifactId>
+        <version>${zookeeper.version}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.apache.curator</groupId>
+        <artifactId>curator-recipes</artifactId>
+        <version>${curator.version}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+    </dependency>
 </dependencies>
 ```
 #### 2.5 pom.xml文件中加入maven-springboot打包插件
@@ -35,11 +68,9 @@
 ```
 #### 2.6 开发启动类
 ```java
-import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@EnableDubbo
 @SpringBootApplication
 public class Application {
 
@@ -53,7 +84,7 @@ public class Application {
 ```java
 import com.oven.service.DemoService;
 import org.apache.dubbo.config.annotation.Reference;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -62,8 +93,8 @@ public class DemoController {
     @Reference(version = "1.0.0")
     private DemoService demoService;
 
-    @RequestMapping("/test")
-    public String test(String name) {
+    @GetMapping("/test")
+    public String getUserById(String name) {
         return demoService.sayHello(name);
     }
 
@@ -72,8 +103,10 @@ public class DemoController {
 #### 2.8 编辑配置文件
 ```properties
 server.port=8081
-dubbo.application.id=client
-dubbo.registry.address=zookeeper://172.16.188.194:2181
+dubbo.application.name=demo-consumer
+dubbo.protocol.name=dubbo
+dubbo.protocol.port=20880
+dubbo.registry.address=zookeeper://xxx.xxx.xxx.xxx:2181
 ```
 #### 2.9 编译打包运行
 ### 3. 应用场景

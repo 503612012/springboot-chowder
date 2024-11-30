@@ -1,7 +1,7 @@
 package com.oven.config;
 
 import com.oven.annotation.CurrentUser;
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.support.WebDataBinderFactory;

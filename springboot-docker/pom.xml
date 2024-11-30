@@ -34,7 +34,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <dockerHost>http://172.16.188.194:2375</dockerHost>
+                    <dockerHost>http://192.168.63.2:2375</dockerHost>
                     <imageName>docker/${project.artifactId}</imageName>
                     <imageTags>
                         <imageTag>${project.version}</imageTag>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-    <property name="LOG_HOME" value="/Users/oven/log/springboot-logback"/>
+    <property name="LOG_HOME" value="/Users/oven/logs/springboot-logback"/>
     <property name="PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger.%M:%L - %msg%n"/>
 
     <!-- DEBUG日志定义 -->

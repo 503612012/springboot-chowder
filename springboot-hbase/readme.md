@@ -399,14 +399,14 @@ public class DemoController {
 ```yaml
 hbase:
   config:
-    hbase.zookeeper.quorum: 172.16.188.194
+    hbase.zookeeper.quorum: 192.168.63.2
     hbase.zookeeper.port: 2181
     hbase.zookeeper.znode: /hbase
     hbase.client.keyvalue.maxsize: 1572864000
 ```
 #### 2.2.11 在本机配置hbase所在机器的host
 ```shell script
-172.16.188.194 docker-hbase
+192.168.63.2 docker-hbase
 ```
 #### 2.3 编译打包运行
 ### 3. 应用场景

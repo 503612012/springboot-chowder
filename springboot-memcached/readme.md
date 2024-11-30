@@ -152,7 +152,7 @@ public class DemoController {
 ```
 #### 2.2.9 编写配置文件
 ```properties
-springboot.memcache.ip=172.16.188.194
+springboot.memcache.ip=192.168.63.2
 springboot.memcache.port=11211
 ```
 #### 2.3 编译打包运行

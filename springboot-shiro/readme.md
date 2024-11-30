@@ -86,7 +86,7 @@ public class User {
 ```
 #### 2.8 开发用户服务层
 ```java
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -141,10 +141,10 @@ public class RoleMenuService {
 ```
 #### 2.11 开发自定义realm
 ```java
+import com.oven.entity.User;
 import com.oven.service.RoleMenuService;
 import com.oven.service.RoleService;
 import com.oven.service.UserService;
-import com.oven.vo.User;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -297,7 +297,7 @@ public class NoPermissionException {
 ```
 #### 2.14 开发用户控制层
 ```java
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

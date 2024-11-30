@@ -117,8 +117,8 @@ public class ResultInfo<T> {
 ```
 #### 2.9 开发控制接口类
 ```java
-import com.oven.vo.ResultInfo;
-import com.oven.vo.User;
+import com.oven.entity.ResultInfo;
+import com.oven.entity.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -11,7 +11,7 @@ docker run -d -p 9876:9876 --name mqnamesrv -e "MAX_POSSIBLE_HEAP=100000000" roc
 ```
 #### 2.3 编写配置文件
 ```shell script
-echo "brokerIP1=172.16.188.194" > broker.properties
+echo "brokerIP1=192.168.63.2" > broker.properties
 ```
 #### 2.4 启动broker容器
 ```shell script
@@ -193,7 +193,7 @@ public class MessageListener implements MessageListenerConcurrently {
 #### 3.11 在RocketMQ控制台创建topic
 #### 3.12 编写配置文件
 ```properties
-rocketmq.namesrvAddr=172.16.188.194:9876
+rocketmq.namesrvAddr=192.168.63.2:9876
 rocketmq.producer.groupName=producer
 rocketmq.consumer.groupName=consumer
 ```

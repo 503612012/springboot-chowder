@@ -1,6 +1,6 @@
 package com.oven.dao;
 
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

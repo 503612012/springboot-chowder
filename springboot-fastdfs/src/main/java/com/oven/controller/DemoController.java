@@ -30,7 +30,7 @@ public class DemoController {
         try {
             StorePath path = fastdfsUtils.upload(file);
             redirectAttributes.addFlashAttribute("message", "上传【" + file.getOriginalFilename() + "】成功!");
-            redirectAttributes.addFlashAttribute("path", "http://172.16.188.194:8888/" + path.getFullPath());
+            redirectAttributes.addFlashAttribute("path", "http://192.168.63.2:8888/" + path.getFullPath());
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -1,6 +1,6 @@
 package com.oven.controller;
 
-import com.oven.vo.Message;
+import com.oven.entity.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;

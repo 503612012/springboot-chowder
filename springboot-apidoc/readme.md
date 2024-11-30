@@ -1,14 +1,23 @@
 # springboot炖apidoc
+
 ### 1. 先睹为快
+
 ### 2. 安装apidoc
+
 ```shell script
 npm install apidoc -g
 ```
+
 ### 3. 实现原理
+
 #### 3.1 新建项目
+
 #### 3.2 创建maven目录结构，以及pom.xml文件
+
 #### 3.3 pom.xml文件中加入依赖
+
 ```xml
+
 <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -16,8 +25,11 @@ npm install apidoc -g
     <relativePath/>
 </parent>
 ```
+
 #### 3.4 pom.xml文件中加入springboot-starter依赖
+
 ```xml
+
 <dependencies>
     <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -30,8 +42,11 @@ npm install apidoc -g
     </dependency>
 </dependencies>
 ```
+
 #### 3.5 pom.xml文件中加入maven-springboot打包插件
+
 ```xml
+
 <build>
     <plugins>
         <plugin>
@@ -41,7 +56,9 @@ npm install apidoc -g
     </plugins>
 </build>
 ```
+
 #### 3.6 开发启动类
+
 ```java
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -55,7 +72,9 @@ public class Application {
 
 }
 ```
+
 #### 3.7 开发用户实体类
+
 ```java
 import lombok.Data;
 
@@ -69,9 +88,11 @@ public class User {
 
 }
 ```
+
 #### 3.8 开发控制接口类
+
 ```java
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -143,16 +164,21 @@ public class DemoController {
 
 }
 ```
+
 #### 3.9 项目根目录增加apidoc.json文件
+
 ```json
 {
-    "name": "springboot-apidoc",
-    "version": "v1.0.0",
-    "description": "springboot-apidoc的接口文档"
+  "name": "springboot-apidoc",
+  "version": "v1.0.0",
+  "description": "springboot-apidoc的接口文档"
 }
 ```
+
 #### 3.10 生成apidoc文档
-```shell script
+
+```shell
 apidoc -i springboot-apidoc/ -o springboot-apidoc/apidoc
 ```
+
 ### 4. 应用场景

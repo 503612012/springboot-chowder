@@ -6,7 +6,7 @@
         select * from t_user
     </select>
 
-    <resultMap id="userMap" type="com.oven.vo.User">
+    <resultMap id="userMap" type="com.oven.entity.User">
         <id column="dbid" property="id"/>
         <result column="uname" property="uname"/>
         <result column="pwd" property="pwd"/>

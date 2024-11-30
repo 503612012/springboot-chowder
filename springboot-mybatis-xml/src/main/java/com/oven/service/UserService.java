@@ -1,7 +1,7 @@
 package com.oven.service;
 
+import com.oven.entity.User;
 import com.oven.mapper.UserMapper;
-import com.oven.vo.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

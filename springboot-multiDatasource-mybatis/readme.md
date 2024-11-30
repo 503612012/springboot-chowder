@@ -185,7 +185,7 @@ public class OracleDataSourceConfig {
 ```
 #### 2.11 开发MySqlMapper
 ```java
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -199,7 +199,7 @@ public interface MySqlMapper {
 ```
 #### 2.12 开发OracleMapper
 ```java
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -222,7 +222,7 @@ public interface OracleMapper {
         select * from t_user
     </select>
 
-    <resultMap id="userMap" type="com.oven.vo.User">
+    <resultMap id="userMap" type="com.oven.entity.User">
         <id column="dbid" property="id"/>
         <result column="uname" property="uname"/>
         <result column="pwd" property="pwd"/>
@@ -241,7 +241,7 @@ public interface OracleMapper {
         select * from t_user
     </select>
 
-    <resultMap id="userMap" type="com.oven.vo.User">
+    <resultMap id="userMap" type="com.oven.entity.User">
         <id column="dbid" property="id"/>
         <result column="uname" property="uname"/>
         <result column="pwd" property="pwd"/>
@@ -252,9 +252,9 @@ public interface OracleMapper {
 ```
 #### 2.15 开发UserService类
 ```java
+import com.oven.entity.User;
 import com.oven.mapper.mysql.MySqlMapper;
 import com.oven.mapper.oracle.OracleMapper;
-import com.oven.vo.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -280,8 +280,8 @@ public class UserService {
 ```
 #### 2.16 开发测试接口类
 ```java
+import com.oven.entity.User;
 import com.oven.service.UserService;
-import com.oven.vo.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

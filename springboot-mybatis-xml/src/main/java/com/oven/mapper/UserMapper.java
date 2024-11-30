@@ -1,6 +1,6 @@
 package com.oven.mapper;
 
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

@@ -11,41 +11,17 @@
 
     <artifactId>springboot-dubbo</artifactId>
     <packaging>pom</packaging>
+
+    <properties>
+        <dubbo.version>2.7.5</dubbo.version>
+        <curator.version>4.2.0</curator.version>
+        <zookeeper.version>3.4.12</zookeeper.version>
+    </properties>
+
     <modules>
         <module>springboot-dubbo-client</module>
         <module>springboot-dubbo-server</module>
         <module>springboot-dubbo-common-api</module>
     </modules>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>2.7.3</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.curator</groupId>
-            <artifactId>curator-framework</artifactId>
-            <version>4.0.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.curator</groupId>
-            <artifactId>curator-recipes</artifactId>
-            <version>4.0.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-        </dependency>
-    </dependencies>
 
 </project>

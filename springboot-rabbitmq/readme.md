@@ -123,7 +123,7 @@ public class RabbitMQConsumer {
 ```yaml
 spring:
   rabbitmq:
-    host: 172.16.188.194
+    host: 192.168.63.2
     port: 5672
     username: admin
     password: 123456

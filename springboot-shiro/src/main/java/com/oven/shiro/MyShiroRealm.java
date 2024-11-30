@@ -1,9 +1,9 @@
 package com.oven.shiro;
 
+import com.oven.entity.User;
 import com.oven.service.RoleMenuService;
 import com.oven.service.RoleService;
 import com.oven.service.UserService;
-import com.oven.vo.User;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;

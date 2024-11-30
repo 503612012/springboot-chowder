@@ -17,95 +17,103 @@
     </parent>
 
     <modules>
-        <module>demo</module>
-        <module>springboot-commandLineRunner</module>
-        <module>springboot-freemarker</module>
-        <module>springboot-jsp</module>
-        <module>springboot-thymeleaf</module>
-        <module>springboot-hibernate</module>
-        <module>springboot-mybatis-xml</module>
-        <module>springboot-mybatis-annotation</module>
-        <module>springboot-jdbcTemplate</module>
-        <module>springboot-multiDatasource-jdbc</module>
-        <module>springboot-multiDatasource-mybatis</module>
-        <module>springboot-multiDatasource-jpa</module>
-        <module>springboot-druid-monitor</module>
-        <module>springboot-multi-tenant</module>
+        <module>springboot-access-log</module>
         <module>springboot-activemq</module>
-        <module>springboot-rabbitmq</module>
-        <module>springboot-rocketmq</module>
-        <module>springboot-kafka</module>
-        <module>springboot-fileUpload</module>
-        <module>springboot-fastdfs</module>
-        <module>springboot-swagger2</module>
-        <module>springboot-apidoc</module>
-        <module>springboot-restdoc</module>
-        <module>springboot-knife4j</module>
-        <module>springboot-task</module>
-        <module>springboot-schedule</module>
-        <module>springboot-quartz</module>
-        <module>springboot-quartz-web</module>
-        <module>springboot-logback</module>
-        <module>springboot-graylog</module>
         <module>springboot-actuator</module>
-        <module>springboot-elk</module>
         <module>springboot-admin</module>
-        <module>springboot-prometheus</module>
-        <module>springboot-devtools</module>
+        <module>springboot-alipay</module>
+        <module>springboot-apidoc</module>
+        <module>springboot-argumentResolver</module>
+        <module>springboot-async</module>
         <module>springboot-cache-caffeine</module>
-        <module>springboot-cache-redis</module>
-        <module>springboot-cache-spring</module>
         <module>springboot-cache-ehcache</module>
         <module>springboot-cache-guava</module>
-        <module>springboot-dubbo</module>
-        <module>springboot-esper</module>
-        <module>springboot-email</module>
-        <module>springboot-factory</module>
-        <module>springboot-interceptor</module>
-        <module>springboot-filter</module>
-        <module>springboot-listener</module>
-        <module>springboot-jasypt</module>
-        <module>springboot-event</module>
-        <module>springboot-webservice</module>
-        <module>springboot-lucene</module>
-        <module>springboot-limit</module>
-        <module>springboot-exception</module>
-        <module>springboot-hbase</module>
-        <module>springboot-mongodb</module>
-        <module>springboot-redis</module>
-        <module>springboot-memcached</module>
-        <module>springboot-i18n</module>
-        <module>springboot-session</module>
-        <module>springboot-restTemplate</module>
-        <module>springboot-access-log</module>
-        <module>springboot-property</module>
-        <module>springboot-async</module>
-        <module>springboot-jwt</module>
-        <module>springboot-netty</module>
-        <module>springboot-shiro</module>
-        <module>springboot-docker</module>
-        <module>springboot-dateformat</module>
-        <module>springboot-nginx-loadBalanced</module>
-        <module>springboot-argumentResolver</module>
-        <module>springboot-elasticjob</module>
-        <module>springboot-sentinel</module>
-        <module>springboot-easypoi</module>
-        <module>springboot-dynamic-schedule</module>
-        <module>springboot-mqtt</module>
-        <module>springboot-sse</module>
-        <module>springboot-minio</module>
-        <module>springboot-websocket</module>
+        <module>springboot-cache-redis</module>
+        <module>springboot-cache-spring</module>
         <module>springboot-caffeine</module>
+        <module>springboot-commandLineRunner</module>
         <module>springboot-cross</module>
+        <module>springboot-dateformat</module>
+        <module>springboot-derby</module>
+        <module>springboot-devtools</module>
+        <module>springboot-disruptor</module>
+        <module>springboot-docker</module>
+        <module>springboot-druid-monitor</module>
+        <module>springboot-dubbo</module>
         <module>springboot-dynamic-datasource</module>
+        <module>springboot-dynamic-schedule</module>
+        <module>springboot-easypoi</module>
+        <module>springboot-elasticjob</module>
         <module>springboot-elasticsearch</module>
+        <module>springboot-elk</module>
+        <module>springboot-email</module>
         <module>springboot-encry</module>
+        <module>springboot-esper</module>
+        <module>springboot-event</module>
+        <module>springboot-exception</module>
         <module>springboot-extend</module>
+        <module>springboot-factory</module>
+        <module>springboot-fastdfs</module>
+        <module>springboot-fileUpload</module>
+        <module>springboot-filter</module>
+        <module>springboot-freemarker</module>
         <module>springboot-getIp</module>
-        <module>springboot-guava</module>
+        <module>springboot-graylog</module>
+        <module>springboot-hbase</module>
+        <module>springboot-hibernate</module>
+        <module>springboot-i18n</module>
+        <module>springboot-influxdb</module>
+        <module>springboot-interceptor</module>
+        <module>springboot-jasypt</module>
+        <module>springboot-jayway-jsonpath</module>
+        <module>springboot-jdbcTemplate</module>
+        <module>springboot-jsp</module>
+        <module>springboot-jwt</module>
+        <module>springboot-kafka</module>
+        <module>springboot-knife4j</module>
+        <module>springboot-lifecycle</module>
+        <module>springboot-limit</module>
+        <module>springboot-listener</module>
+        <module>springboot-logback</module>
+        <module>springboot-lucene</module>
+        <module>springboot-memcached</module>
+        <module>springboot-minio</module>
+        <module>springboot-mongodb</module>
+        <module>springboot-mqtt</module>
+        <module>springboot-multi-tenant</module>
+        <module>springboot-multiDatasource-jdbc</module>
+        <module>springboot-multiDatasource-jpa</module>
+        <module>springboot-multiDatasource-mybatis</module>
+        <module>springboot-mybatis-annotation</module>
+        <module>springboot-mybatis-plus</module>
+        <module>springboot-mybatis-xml</module>
+        <module>springboot-netty</module>
+        <module>springboot-nginx-loadBalanced</module>
         <module>springboot-oauth2</module>
+        <module>springboot-okhttp</module>
+        <module>springboot-prometheus</module>
+        <module>springboot-property</module>
+        <module>springboot-quartz</module>
+        <module>springboot-quartz-web</module>
+        <module>springboot-rabbitmq</module>
+        <module>springboot-redis</module>
         <module>springboot-redisson</module>
+        <module>springboot-restdoc</module>
+        <module>springboot-restTemplate</module>
+        <module>springboot-rocketmq</module>
+        <module>springboot-schedule</module>
+        <module>springboot-sentinel</module>
+        <module>springboot-session</module>
+        <module>springboot-shiro</module>
+        <module>springboot-sqlite</module>
+        <module>springboot-sse</module>
+        <module>springboot-swagger2</module>
+        <module>springboot-task</module>
+        <module>springboot-thymeleaf</module>
+        <module>springboot-webclient</module>
         <module>springboot-webflux</module>
+        <module>springboot-webservice</module>
+        <module>springboot-websocket</module>
     </modules>
 
     <build>

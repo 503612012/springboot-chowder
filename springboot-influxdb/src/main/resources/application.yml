@@ -1,0 +1,5 @@
+spring:
+  influx:
+    url: http://192.168.63.2:2086
+    user: admin
+    password:

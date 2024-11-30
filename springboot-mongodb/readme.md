@@ -81,7 +81,7 @@ public class User {
 ```
 #### 2.2.7 开发用户Dao层
 ```java
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface UserDao extends MongoRepository<User, Integer> {
@@ -90,7 +90,7 @@ public interface UserDao extends MongoRepository<User, Integer> {
 #### 2.2.8 开发用户service层
 ```java
 import com.oven.dao.UserDao;
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -118,8 +118,8 @@ public class UserService {
 ```
 #### 2.2.9 开发测试控制层
 ```java
+import com.oven.entity.User;
 import com.oven.service.UserService;
-import com.oven.vo.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -156,7 +156,7 @@ public class DemoController {
 spring:
   data:
     mongodb:
-      host: 172.16.188.194
+      host: 192.168.63.2
       port: 27017
       database: springboot_mongo
 ```

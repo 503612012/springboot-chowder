@@ -145,7 +145,7 @@ public class WebLogAspect {
 ```
 #### 2.10 开发测试控制器类
 ```java
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

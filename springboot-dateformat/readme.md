@@ -68,7 +68,7 @@ public class User {
 ```
 #### 2.8 开发测试接口
 ```java
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

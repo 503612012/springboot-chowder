@@ -16,7 +16,7 @@ docker run -d --network=host --name tracker -v /usr/local/fastdfs/tracker:/var/f
 ```
 #### 2.4 启动stroage容器
 ```shell script
-docker run -d --network=host --name storage -e TRACKER_SERVER=172.16.188.194:22122 -v /usr/local/fastdfs/storage:/var/fdfs -e GROUP_NAME=group1 delron/fastdfs storage
+docker run -d --network=host --name storage -e TRACKER_SERVER=192.168.63.2:22122 -v /usr/local/fastdfs/storage:/var/fdfs -e GROUP_NAME=group1 delron/fastdfs storage
 ```
 #### 2.5 测试
 ##### 2.5.1 拷贝一张图片(test.jpg)到/usr/local/fastdfs/storage目录中
@@ -34,7 +34,7 @@ cd /var/fdfs
 ```
 ##### 2.5.5 用上述命令的返回结果到浏览器访问
 ```http request
-http://172.16.188.194:8888/group1/M00/00/00/xxxxxxxxxxxxxxxxxxxx.jpg
+http://192.168.63.2:8888/group1/M00/00/00/xxxxxxxxxxxxxxxxxxxx.jpg
 ```
 ### 3. 实现原理
 #### 3.1 新建项目
@@ -204,7 +204,7 @@ public class DemoController {
         try {
             StorePath path = fastdfsUtils.upload(file);
             redirectAttributes.addFlashAttribute("message", "上传【" + file.getOriginalFilename() + "】成功!");
-            redirectAttributes.addFlashAttribute("path", "http://172.16.188.194:8888/" + path.getFullPath());
+            redirectAttributes.addFlashAttribute("path", "http://192.168.63.2:8888/" + path.getFullPath());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -246,7 +246,7 @@ fdfs.connect-timeout=600
 fdfs.so-timeout=1500
 fdfs.thumb-image.height=150
 fdfs.thumb-image.width=150
-fdfs.tracker-list=172.16.188.194:22122
+fdfs.tracker-list=192.168.63.2:22122
 fdfs.pool.jmx-enabled=false
 ```
 #### 3.11 编译打包运行

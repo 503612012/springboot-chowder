@@ -88,7 +88,7 @@ public class User {
 ```
 #### 2.8 开发用户服务层
 ```java
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;

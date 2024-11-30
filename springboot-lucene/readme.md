@@ -90,14 +90,29 @@ public class Article {
 ```
 #### 2.8 开发lucene工具类
 ```java
-import com.oven.vo.Article;
+import com.oven.entity.Article;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.document.*;
-import org.apache.lucene.index.*;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
+import org.apache.lucene.document.StringField;
+import org.apache.lucene.document.TextField;
+import org.apache.lucene.index.DirectoryReader;
+import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.index.IndexWriterConfig;
+import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.classic.MultiFieldQueryParser;
-import org.apache.lucene.search.*;
-import org.apache.lucene.search.highlight.*;
+import org.apache.lucene.search.BooleanClause;
+import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.Query;
+import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.TopDocs;
+import org.apache.lucene.search.highlight.Fragmenter;
+import org.apache.lucene.search.highlight.Highlighter;
+import org.apache.lucene.search.highlight.QueryScorer;
+import org.apache.lucene.search.highlight.SimpleHTMLFormatter;
+import org.apache.lucene.search.highlight.SimpleSpanFragmenter;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.springframework.util.StringUtils;
@@ -218,8 +233,8 @@ public class LuceneUtil {
 ```
 #### 2.9 开发测试控制层
 ```java
+import com.oven.entity.Article;
 import com.oven.util.LuceneUtil;
-import com.oven.vo.Article;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 

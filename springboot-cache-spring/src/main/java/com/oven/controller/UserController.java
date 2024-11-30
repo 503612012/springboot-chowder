@@ -1,7 +1,6 @@
 package com.oven.controller;
 
 import com.oven.service.UserService;
-import com.oven.vo.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +13,7 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping("/getById")
-    public User getById(Integer id) {
+    public Object getById(Integer id) {
         return userService.getById(id);
     }
 

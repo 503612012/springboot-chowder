@@ -1,0 +1,6 @@
+alipay:
+  server-url: https://openapi-sandbox.dl.alipaydev.com/gateway.do
+  app-id: 1122
+  private-key: 445566
+  alipay-public-key: 778899
+  notify-url: https://xxx.com/alipay/notify

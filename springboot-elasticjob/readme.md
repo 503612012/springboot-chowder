@@ -85,7 +85,7 @@ public class Application {
 #### 3.7 编辑配置文件
 
 ```properties
-elasticjob.reg-center.server-lists=192.168.1.27:2181
+elasticjob.reg-center.server-lists=xxx.xxx.xxx.xxx:2181
 elasticjob.reg-center.namespace=springboot-elasticjob
 elasticjob.jobs.my-simple-job.elastic-job-class=com.oven.job.MySimpleJob
 elasticjob.jobs.my-simple-job.cron=0/5 * * * * ?

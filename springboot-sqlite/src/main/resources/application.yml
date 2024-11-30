@@ -1,0 +1,10 @@
+spring:
+  datasource:
+#    url: jdbc:sqlite:/Users/oven/Downloads/sqlite/test.db
+    url: jdbc:sqlite::resource:db/test.db
+    driver-class-name: org.sqlite.JDBC
+    type: org.sqlite.SQLiteDataSource
+    schema: classpath:db/schema.sql
+    data: classpath:db/data.sql
+    initialization-mode: always
+    continue-on-error: true

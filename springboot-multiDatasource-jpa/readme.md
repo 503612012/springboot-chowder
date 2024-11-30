@@ -166,7 +166,7 @@ public class JpaConfigMySql {
     @Primary
     public LocalContainerEntityManagerFactoryBean mysqlEntityManagerFactoryRef(EntityManagerFactoryBuilder builder) {
         return builder.dataSource(mysqlDataSource)
-                .packages("com.oven.vo")
+                .packages("com.oven.entity")
                 .build();
     }
 
@@ -208,7 +208,7 @@ public class JpaConfigOracle {
     @Bean
     public LocalContainerEntityManagerFactoryBean oracleEntityManagerFactoryRef(EntityManagerFactoryBuilder builder) {
         return builder.dataSource(oracleDataSource)
-                .packages("com.oven.vo")
+                .packages("com.oven.entity")
                 .build();
     }
 
@@ -223,7 +223,7 @@ public class JpaConfigOracle {
 ```
 #### 2.12 开发UserDao类-mysql
 ```java
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -233,7 +233,7 @@ public interface MysqlUserDao extends JpaRepository<User, Integer> {
 ```
 #### 2.13 开发UserDao类-oracle
 ```java
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -245,7 +245,7 @@ public interface OracleUserDao extends JpaRepository<User, Integer> {
 ```java
 import com.oven.dao.mysql.MysqlUserDao;
 import com.oven.dao.oracle.OracleUserDao;
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -271,8 +271,8 @@ public class UserService {
 ```
 #### 2.15 开发测试接口类
 ```java
+import com.oven.entity.User;
 import com.oven.service.UserService;
-import com.oven.vo.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

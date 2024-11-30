@@ -15,11 +15,11 @@ docker pull wurstmeister/kafka
 ```
 #### 2.4 启动kafka容器
 ```shell script
-docker run -d --name mykafka -p 9092:9092 -e KAFKA_BROKER_ID=0 -e KAFKA_ZOOKEEPER_CONNECT=172.16.188.194:2181/kafka -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://172.16.188.194:9092 -e KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092 -v /etc/localtime:/etc/localtime wurstmeister/kafka
+docker run -d --name mykafka -p 9092:9092 -e KAFKA_BROKER_ID=0 -e KAFKA_ZOOKEEPER_CONNECT=192.168.63.2:2181/kafka -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://192.168.63.2:9092 -e KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092 -v /etc/localtime:/etc/localtime wurstmeister/kafka
 ```
 #### 2.5 监控topic消息
 ```shell script
-bin/kafka-console-consumer.sh --bootstrap-server 172.16.188.194:9092 --topic springboot-kafka
+bin/kafka-console-consumer.sh --bootstrap-server 192.168.63.2:9092 --topic springboot-kafka
 ```
 ### 3. 实现原理
 #### 3.1 新建项目
@@ -130,7 +130,7 @@ public class KafkaConsumer {
 ```
 #### 3.10 编写配置文件
 ```properties
-spring.kafka.producer.bootstrap-servers=172.16.188.194:9092
+spring.kafka.producer.bootstrap-servers=192.168.63.2:9092
 spring.kafka.consumer.bootstrap-servers=${spring.kafka.producer.bootstrap-servers}
 spring.kafka.consumer.group-id=consumer_group
 spring.kafka.consumer.enable-auto-commit=true

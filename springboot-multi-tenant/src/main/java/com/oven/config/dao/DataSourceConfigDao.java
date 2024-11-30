@@ -1,6 +1,6 @@
 package com.oven.config.dao;
 
-import com.oven.config.vo.DataSourceConfig;
+import com.oven.config.entity.DataSourceConfig;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;

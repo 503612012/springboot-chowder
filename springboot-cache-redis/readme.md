@@ -78,7 +78,7 @@ public class User implements Serializable {
 ```
 #### 2.8 开发用户服务层
 ```java
-import com.oven.vo.User;
+import com.oven.entity.User;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -104,7 +104,6 @@ public class UserService {
 #### 2.9 开发用户控制层
 ```java
 import com.oven.service.UserService;
-import com.oven.vo.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -117,7 +116,7 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping("/getById")
-    public User getById(Integer id) {
+    public Object getById(Integer id) {
         return userService.getById(id);
     }
 

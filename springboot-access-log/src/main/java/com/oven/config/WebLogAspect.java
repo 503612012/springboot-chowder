@@ -30,15 +30,15 @@ public class WebLogAspect {
         }
         HttpServletRequest request = attributes.getRequest();
         // 记录请求内容
-        log.info("请求地址：" + request.getRequestURL().toString());
-        log.info("请求方法：" + request.getMethod());
-        log.info("请求者IP：" + request.getRemoteAddr());
-        log.info("请求参数：" + ParametersUtils.getParameters(request));
+        log.info("请求地址：{}", request.getRequestURL().toString());
+        log.info("请求方法：{}", request.getMethod());
+        log.info("请求者IP：{}", request.getRemoteAddr());
+        log.info("请求参数：{}", ParametersUtils.getParameters(request));
     }
 
     @AfterReturning(returning = "ret", pointcut = "webLog()")
     public void doAfterReturning(Object ret) {
-        log.info("返回结果：" + ret.toString());
+        log.info("返回结果：{}", ret.toString());
     }
 
 }

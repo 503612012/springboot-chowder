@@ -17,7 +17,6 @@ public interface MailService {
      */
     boolean sendWithImageHtml(String to, String subject, String html, String[] cids, String[] filePaths);
 
-
     /**
      * 发送带有附件的邮件
      */

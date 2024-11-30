@@ -1,0 +1,5 @@
+remote:
+  baseUrl:
+    host: http://localhost:8080/
+    api:
+      getStudent: student/get

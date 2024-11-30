@@ -279,9 +279,9 @@ public class InterceptorConfig implements WebMvcConfigurer {
 #### 2.13 开发测试控制器类
 ```java
 import com.oven.constants.AppConst;
+import com.oven.entity.User;
 import com.oven.utils.JwtUtils;
 import com.oven.utils.ResultInfo;
-import com.oven.vo.User;
 import io.jsonwebtoken.Claims;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

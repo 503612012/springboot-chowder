@@ -50,7 +50,7 @@
                 </execution>
             </executions>
             <configuration>
-                <dockerHost>http://172.16.188.194:2375</dockerHost>
+                <dockerHost>http://192.168.63.2:2375</dockerHost>
                 <imageName>docker/${project.artifactId}</imageName>
                 <imageTags>
                     <imageTag>${project.version}</imageTag>
@@ -117,7 +117,7 @@ systemctl restart docker
 #### 2.12 idea安装docker插件
 #### 2.13 idea配置远程docker
 ```
-Docker -> TCP socker -> tcp://172.16.188.194:2375
+Docker -> TCP socker -> tcp://192.168.63.2:2375
 ```
 #### 2.14 编写配置文件
 ```properties
